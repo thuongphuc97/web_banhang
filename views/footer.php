@@ -5,7 +5,7 @@
 	© 2019 - Anh Nguyen - FoIT (Hutech)
 </footer>
 </div>
-<script src="/web/assets/js/jquery-3.3.1.min.js"></script>
-<script src="/web/assets/js/bootstrap.min.js"></script>
+<script src="/lab3/assets/js/jquery-3.3.1.min.js"></script>
+<script src="/lab3/assets/js/bootstrap.min.js"></script>
 </body>
 </html>

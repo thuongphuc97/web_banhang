@@ -77,5 +77,42 @@ class Product{
     }
 }
 
+        
+        $result = $db->querry_execute($sql);
+        return $result;
+    }
+    
+    public static function list_product(){
+        $db = new Db();
 
+        $sql = "SELECT * FROM `product`, category WHERE category.CateID=product.CateID";
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
+    public static function get_list_by_cate($cat_id)
+    {
+        $db = new Db();
+
+        $sql = "SELECT * FROM `product` WHERE CateID='$cat_id'";
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
+    public static function get_product($id)
+    {
+        $db = new Db();
+
+        $sql = "SELECT * FROM `product` WHERE ProductID='$id'";
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
+    public function get_product_relate($id,$cate_id)
+    {
+        $db = new Db();
+
+        $sql = "SELECT * FROM `product` WHERE ProductID!='$id' and CateID='$cate_id'";
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
+} 
+ 
 ?>

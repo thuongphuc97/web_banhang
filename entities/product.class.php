@@ -2,6 +2,7 @@
 require_once("config/db.class.php");
 // 
 class Product{
+
     
     public $productID;
     public $productName;
